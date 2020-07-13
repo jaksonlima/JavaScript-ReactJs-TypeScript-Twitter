@@ -8,6 +8,7 @@ import {
     LocationIcon,
     CakeIcon,
     Folowage,
+    EditButton,
 } from './styles';
 
 const ProfilePage: React.FC = () => {
@@ -18,7 +19,7 @@ const ProfilePage: React.FC = () => {
             </Banner>
 
             <ProfileData>
-                {/* <EditButton outlined>Editar Perfil</EditButton> */}
+                <EditButton outlined>Editar Perfil</EditButton>
 
                 <h1>Jakson Lima</h1>
                 <h2>@jaksonlima</h2>
@@ -37,16 +38,16 @@ const ProfilePage: React.FC = () => {
                         Nascido (a) em 19 setembro 1997.
                     </li>
                 </ul>
-            </ProfileData>
 
-            <Folowage>
-                <span>
-                    seguindo <strong>100</strong>
-                </span>
-                <span>
-                    <strong>10942 </strong> seguidores
-                </span>
-            </Folowage>
+                <Folowage>
+                    <span>
+                        seguindo <strong>100</strong>
+                    </span>
+                    <span>
+                        <strong>10942 </strong> seguidores
+                    </span>
+                </Folowage>
+            </ProfileData>
         </Container>
     );
 };
