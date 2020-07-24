@@ -1,6 +1,21 @@
 import React from 'react';
-import { Description } from 'styled-icons/material';
-import { Body, CommentIcon, Container, Dot, Header, Icons, ImageContent, LikeIcon, Retweeted, RetweetIcon, RocketseatIcon, Status } from './styles';
+import {
+    Container,
+    Retweeted,
+    RocketseatIcon,
+    Body,
+    Avatar,
+    Content,
+    Header,
+    Description,
+    ImageContent,
+    Icons,
+    Status,
+    CommentIcon,
+    RetweetIcon,
+    Dot,
+    LikeIcon
+} from './styles';
 
 const Tweet: React.FC = () => {
     return (
@@ -11,33 +26,37 @@ const Tweet: React.FC = () => {
             </Retweeted>
 
             <Body>
-                <Header>
-                    <strong>Rocketseat</strong>
-                    <strong>@rocketseat</strong>
-                    <Dot />
-                    <time>27 de jun</time>
-                </Header>
+                <Avatar />
 
-                <Description>Foguete não tem ré</Description>
+                <Content>
+                    <Header>
+                        <strong>Rocketseat</strong>
+                        <p>@rocketseat</p>
+                        <Dot />
+                        <time>27 de jun</time>
+                    </Header>
 
-                <ImageContent />
+                    <Description>Foguete não tem ré</Description>
 
-                <Icons>
-                    <Status>
-                        <CommentIcon />
+                    <ImageContent />
+
+                    <Icons>
+                        <Status>
+                            <CommentIcon />
                         18
                     </Status>
-                    <Status>
-                        <RetweetIcon />
+                        <Status>
+                            <RetweetIcon />
                         18
                     </Status>
-                    <Status>
-                        <LikeIcon />
+                        <Status>
+                            <LikeIcon />
                         18
                     </Status>
-                </Icons>
+                    </Icons>
+                </Content>
             </Body>
-        </Container>
+        </Container >
     )
 }
 
