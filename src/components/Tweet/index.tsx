@@ -30,8 +30,8 @@ const Tweet: React.FC = () => {
 
                 <Content className="lima">
                     <Header>
-                        <strong>Rocketseat</strong>
-                        <span>@rocketseat</span>
+                        <strong>LimaSystem</strong>
+                        <span>@limasystem</span>
                         <Dot />
                         <time>27 de jun</time>
                     </Header>

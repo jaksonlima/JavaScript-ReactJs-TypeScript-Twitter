@@ -1,19 +1,20 @@
 import styled, { css } from 'styled-components';
-
 import {
-    Home,
-    Notifications,
     Email,
-    FavoriteBorder,
-    Person,
-    ExitToApp,
-    Rocketseat
-} from '../../styles/Icons'
+
+
+    ExitToApp, FavoriteBorder, Home,
+    Notifications,
+
+
+    Person
+} from '../../styles/Icons';
+
 
 export const Container = styled.div`
     display: none;
 
-    @media (max-width: 500px) {
+    @media (min-width: 500px) {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -82,7 +83,7 @@ export const MenuButton = styled.button`
         height: 40px;
 
         > span {
-            display: none:
+            display: none;
         }
 
         @media (min-width: 1280px) {
@@ -104,8 +105,8 @@ export const MenuButton = styled.button`
 
     &:hover, &.active {
         span, svg {
-            color: (--twitter);
-            fill: (--twitter);
+            color: var(--twitter);
+            fill: var(--twitter);
         }
     }
 `;
@@ -123,3 +124,55 @@ export const BellIcon = styled(Notifications)`${iconCss}`;
 export const EmailIcon = styled(Email)`${iconCss}`;
 export const FavoriteIcon = styled(FavoriteBorder)`${iconCss}`;
 export const ProfileIcon = styled(Person)`${iconCss}`;
+
+
+export const Botside = styled.div`
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+`;
+export const Avatar = styled.div`
+    width: 39px;
+    height: 39px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: var(--gray);
+`;
+export const ProfileData = styled.div`
+    display: none;
+
+    @media (min-width: 1280px){
+        display: flex;
+        flex-direction: column;
+
+        margin-left: 10px;
+        font-size: 14px;
+
+        > span {
+            color: var(--gray);
+        }
+    }
+`;
+
+export const ExitIcon = styled(ExitToApp)`
+    ${iconCss}
+    display: none;
+
+    @media (min-width: 1280px){
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        color: var(--white);
+        margin-left: 30px;
+        cursor: pointer;
+
+        &:hover{
+            > path {
+                color: var(--like);
+            }
+        }
+    }
+`;
