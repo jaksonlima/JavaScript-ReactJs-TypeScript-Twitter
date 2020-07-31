@@ -17,7 +17,7 @@ const SideBar: React.FC = () => {
             </SearchWrapper>
 
             <Body>
-                <p>{'Loren'.repeat(90)}</p>
+                <p>{'Loren Busca no Twitter '.repeat(100)}</p>
             </Body>
         </Container>
     );
