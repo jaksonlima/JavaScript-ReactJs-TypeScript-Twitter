@@ -1,5 +1,11 @@
 import React from 'react';
 
+import StickyBox from 'react-sticky-box';
+
+import List from '../List'
+import FollowSuggestion from '../FollowSuggestion'
+import News from '../News'
+
 import {
     Container,
     SearchWrapper,
@@ -16,9 +22,52 @@ const SideBar: React.FC = () => {
                 <SearchIcon />
             </SearchWrapper>
 
-            <Body>
-                <p>{'Loren Busca no Twitter '.repeat(100)}</p>
-            </Body>
+            <StickyBox>
+                <Body>
+                    <List
+                        title="Talvez voce curta"
+                        elements={[
+                            <FollowSuggestion
+                                name="Lima"
+                                nickname="@lima"
+                            />,
+                            <FollowSuggestion
+                                name="Lima"
+                                nickname="@lima"
+                            />,
+                            <FollowSuggestion
+                                name="Lima"
+                                nickname="@lima"
+                            />
+                        ]}
+                    />
+                    <List
+                        title="Talvez voce curta"
+                        elements={[
+                            <News />,
+                            <News />,
+                            <News />,
+                        ]}
+                    />
+                    <List
+                        title="Talvez voce curta"
+                        elements={[
+                            <News />,
+                            <News />,
+                            <News />,
+                        ]}
+                    />
+                    <List
+                        title="Talvez voce curta"
+                        elements={[
+                            <News />,
+                            <News />,
+                            <News />,
+                        ]}
+                    />
+
+                </Body>
+            </StickyBox>
         </Container>
     );
 }
